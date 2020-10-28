@@ -51,10 +51,12 @@ namespace TechJobsConsole
                     string aValue = kvp.Value;
 
                     if (aValue.Contains(value, System.StringComparison.OrdinalIgnoreCase))
+                    //if (aValue.ToLower().Contains(value.ToLower()))
                     {
                         jobs.Add(row);
+                        break;
                     }
-                    break;
+                    //break;
                 }
             }
             return jobs;
@@ -72,6 +74,7 @@ namespace TechJobsConsole
                 string aValue = row[column];
 
                 if (aValue.Contains(value, System.StringComparison.OrdinalIgnoreCase))
+                    //if (aValue.ToLower().Contains(value.ToLower()))
                 {
                     jobs.Add(row);
                 }
